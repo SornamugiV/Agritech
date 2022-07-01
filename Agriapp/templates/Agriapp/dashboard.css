@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+:root
+{
+    --green: #8ac288;
+    --white: #fff;
+    --black: #000;
+}
+body
+{
+    min-height: 100vh; 
+    overflow-x:hidden;
+}
+.container
+{
+    position: relative; 
+    width:100%;
+}
+.navigation
+{
+    position: fixed;
+    left: 0px; 
+    width:250px; 
+    height: 100%; 
+    background: var(--green);
+    transition: 0.5s; 
+    overflow: hidden;
+    border-left: 10px solid var(--green);
+}
+.navigation.active
+{
+    width: 75px;
+}
+.navigation ul
+{
+    position: relative;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    padding-left: 0px;
+}
+.navigation ul li
+{
+    position: reletive; 
+    width:200%; 
+    list-style: none; 
+    border-top-left-radius: 30px; 
+    border-bottom-left-radius: 30px;
+}
+.navigation ul li:hover
+{
+  background: var(--white);
+ 
+} 
+.navigation ul li a
+{
+    position: relative; 
+    display:block; 
+    width:100%; 
+    display:flex; 
+    text-decoration: none; 
+    color: var(--white);
+}
+
+.navigation ul li:hover a
+{
+    color: var(--green);
+}
+.navigation ul li a .icon
+{
+    position: relative; 
+    display: block; 
+    min-width: 60px; 
+    height: 40px; 
+    line-height: 40px; 
+    text-align: center;
+}
+.navigation ul li a .icon i
+{
+    font-size: 1.5em;
+}
+.navigation ul li a .title
+{
+    position: relative; 
+    display: block; 
+    padding: 0 10px; 
+    height: 40px; 
+    line-height: 40px; 
+    text-align: start; 
+    white-space: nowrap;
+}
+.navigation ul li:hover a::before
+{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 30px;
+    box-shadow: 30px 30px 0 10px var(--white);
+    pointer-events: none;
+}
+.navigation ul li:hover a::after
+{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 30px;
+    box-shadow: 30px -30px 0 10px var(--white);
+    pointer-events: none;
+}
+.navigation ul li a i.bi-caret-down-fill{
+    position: relative;
+    margin-left: 60px;
+    margin-top: 20px;
+    transform: translateY(-50%);
+    transition: transform 0.4s;
+}
+
+.navigation ul li a i.bi-caret-down-fill.rotate{
+    transform: translateY(-50%) rotate(-180deg);
+}
+.navigation ul ul
+{
+    position: static;
+    display: none;
+} 
+.navigation ul .set-show.show{
+    display: block;
+}
+.navigation ul ul li{
+    padding-left: 60px;
+}
+.main
+{
+    position: absolute;
+    width: 97.9%;
+    left: 137px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+}
+.main
+{
+    position: absolute;
+    width: 81.7%;
+    left: 250px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+}
+.main.active
+{
+    width: 95.3%;
+    left: 75px;
+}
+.topbar
+{
+    width: 100%;
+    height: 60px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    background: var(--green);
+}
+.toggle
+{
+    position: relative;
+    top: 0;
+    height: 50px;
+    width: 50px;
+    margin-left: -12px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 1.75em;
+    cursor: pointer;
+    color: white;
+}
+.user
+{
+    position: relative;
+    margin-left: 70px;
+    margin-right: 65px;
+    height: 40px;
+}
+.dropdown
+{
+        position: relative;
+        width: 100%;
+        z-index: 3;
+}
+.dropdown ul
+{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.dropdown ul li{
+    position: relative;
+    float: left;
+    width: 25%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    opacity: 1;
+    background-color: var(--green);
+}
+.dropdown ul li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+.dropdown ul li a:hover{
+    background-color: #ddd;
+    color: var(--green);
+}
+.dropdown ul li ul li{
+    display: none;
+}
+.dropdown ul li:hover ul li{
+    display: block;
+    position: relative;
+    width:100%;
+}
+.cardBox{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    /* top:10px; */
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+}
+.cardBox .card{
+    position: relative;
+    background: var(--white);
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.8);
+}
+.cardBox .card .number{
+    position: relative;
+    font-weight: 500;
+    font-size: 2.2em;
+    color: var(--green);
+}
+.cardBox .card .cardName{
+    font-size: 1em;
+    color: #666;
+    margin-top: 2px;
+}
+.cardBox .card .iconBx{
+    font-size: 1.5em;
+    color: #666;
+}
+input[type=text], select, textarea{
+    width: 95%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+
+  h2{
+    /* margin-left: 160px; */
+    justify-content: center;
+    align-items: center;
+  }
+
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  .form-popup {
+    display: none;
+    position: relative;
+    bottom: 70px;
+    right: -25%;
+    border: 3px solid #f1f1f1;
+    z-index: 2;
+    background-color: #f2f2f2;
+    padding: 5px;
+    width: 50%;
+    justify-content: center;
+    align-content: center;
+    /* margin-top: 7%; */
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+  }
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  input[type=button] {
+    background-color: rgb(252, 87, 87);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .row{
+    padding-bottom: 5px;
+  }
+    @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Agriapp</title>
+        <style>
+            .show,
+            .hide
+            {
+                position: absolute;
+                right: 15px;
+                top:10px;
+                font-size: 20px;
+            }
+            .hide{
+                display: none;
+            }
+        </style>
+    </head>
+    <body style="background-image: url('https://s2.best-wallpaper.net/wallpaper/1920x1200/1711/Rice-field-green_1920x1200.jpg'); background-repeat: no-repeat; background-size: cover;">
+        
+        <div class="text-center" style="margin: 10rem auto">
+            <form style="max-width: 380px; margin: auto; -webkit-box-shadow: -2px 2px 16px 3px rgba(0,0,0,0.75);
+            -moz-box-shadow: -2px 2px 16px 3px rgba(0,0,0,0.75);
+            box-shadow: -2px 2px 16px 3px rgba(0,0,0,0.75); padding: 30px; " class="mt-8">
+            <img src="logo.png" alt="LOGO" height="80px">
+                <h1 class="h3 mt-2 mb-2 font-weight-normal">AgroTech Welcomes you!</h1>
+                <h3 class="h5 mt-2 mb-2 font-weight-normal">Please Sign in</h3>
+    
+                <div class="input-group mt-2 mb- ml-2 mr-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                           <i class="fa-solid fa-user"></i>
+                        </span>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="user" style="width: 135%" class="form-control" placeholder="User Name" autocomplete="off" required autofocus>   
+                    </div>
+                </div>
+                <div  class="input-group mt-2 mb-2 ml-2 mr-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="fa-solid fa-lock"></i>        
+                        </span>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="password" style=" width: 135%" class="form-control password" placeholder="Password" required autofocus>
+                        <i class=" show fa-solid fa-eye"></i>
+                        <i class="hide fa-solid fa-eye-slash"></i>
+                    </div>
+                </div>
+                <div class="mt-2 mb-2 ml-2 mr-2">
+                    <a href="dashboard.html">
+                        <button class="btn btn-success btn-block" style="background-color: rgb(88, 211, 6); width: 105%;" >Login</button>
+                    </a>
+                </div>
+            </form>
+        </div>
+        <script>
+            var passwordField = document.querySelector('.password');
+            var show = document.querySelector('.show');
+            var hide = document.querySelector('.hide');
+            show.onclick = function(){
+                passwordField.setAttribute("type","text");
+                show.style.display ="none";
+                hide.style.display = "block";
+            }
+            hide.onclick = function(){
+                passwordField.setAttribute("type","password");
+                hide.style.display ="none";
+                show.style.display = "block";
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+       
+    </body>
+</html>
+
+                    
+            
+        
+                

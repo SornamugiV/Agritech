@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        
+        <title>Agriapp Dashboard</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="navigation">
+                <ul>
+                    <li style="margin-top: 20px; margin-bottom: 40px; pointer-events: none;">
+                        <a href="#">
+                            <span class="icon">
+                                <img src="logo.png" alt="LOGO" style="height: 40px;">
+                            </span>
+                            <span class="title">Agrotech</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <span class="icon">
+                                <i class="bi bi-house-door-fill"></i>
+                            </span>
+                            <span class="title">Home</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="farmer.html">
+                            <span class="icon">
+                                <i class="bi bi-person"></i>
+                            </span>
+                            <span class="title">Farmer</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="fic.html">
+                            <span class="icon">
+                                <i class="bi bi-shop"></i>
+                            </span>
+                            <span class="title">FIC</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="buyers.html">
+                            <span class="icon">
+                                <i class="bi bi-basket"></i>
+                            </span>
+                            <span class="title">Buyers</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="buy.html">
+                            <span class="icon">
+                                <i class="bi bi-cart"></i>
+                            </span>
+                            <span class="title">Purchase</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="sales.html">
+                            <span class="icon">
+                                <i class="bi bi-cash"></i>
+                            </span>
+                            <span class="title">Sales</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a class="set-btn">
+                            <span class="icon">
+                                <i class="bi bi-gear-wide-connected"></i>
+                            </span>
+                            <span class="title">Settings</i></span>
+                            <i class="bi bi-caret-down-fill"></i>
+                        </a>
+                    </li>
+                        <ul class="set-show">
+                            <li> <a href="user.html">Manage User</a></li>
+                            <li> <a href="cluster.html">Manage Cluster</a></li>
+                            <li> <a href="fpo.html">Manage FPO</a></li>
+                        </ul>
+                    
+                </ul>
+                <ul>
+                    <li>
+                        <a href="login.html">
+                            <span class="icon">
+                                <i class="bi bi-box-arrow-right"></i>
+                            </span>
+                            <span class="title">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <i class="bi bi-list"></i>
+                </div>
+                <div class="title">
+                    <h5 style=" color: white;
+                    font-style: italic; margin: 20px;
+                    margin-bottom: 20px;">HOME
+                    </h5>
+                </div>
+                <div class="dropdown">
+                    <ul>
+                        <li>
+                            <a href="#">Cluster</a>
+                            <ul>
+                                <li><a href="#">TN Cluster</a></li>
+                                <li><a href="#">KL Cluster</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Agent</a>
+                            <ul>
+                                <li><a href="#">Agent 1</a></li>
+                                <li><a href="#">Agent 2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">FPO</a>
+                            <ul>
+                                <li><a href="#">FPO 1</a></li>
+                                <li><a href="#">FPO 2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Farmer</a>
+                            <ul>
+                                <li><a href="#">Farmer 1</a></li>
+                                <li><a href="#">Farmer 2</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="user">
+                    <button class="btn btn-info">Admin</button>
+                </div>
+            </div>
+           
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="number">1200</div>
+                        <div class="cardName">Daily sales</div>
+                    </div>
+                    <div class="iconBx">
+                        <i class="bi bi-bag-check"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="number">1000</div>
+                        <div class="cardName">Daily purchase</div>
+                    </div>
+                    <div class="iconBx">
+                        <i class="bi bi-basket3"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="number">12350</div>
+                        <div class="cardName">Monthly sales</div>
+                    </div>
+                    <div class="iconBx">
+                        <i class="bi bi-cart-check"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="number">14460</div>
+                        <div class="cardName">Monthly purchase</div>
+                    </div>
+                    <div class="iconBx">
+                        <i class="bi bi-cart-plus"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="graphBox">
+                <div class="box">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="box"><canvas id="profit"></canvas></div>
+            </div>
+        </div>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>
+            let toggle = document.querySelector('.toggle');
+            let navigation = document.querySelector('.navigation');
+            let main = document.querySelector('.main');
+            toggle.onclick = function(){
+                navigation.classList.toggle('active');
+                main.classList.toggle('active');
+            }
+        </script>
+        <script>
+            $('.navigation ul li a.set-btn').click(function(){
+                $('.navigation ul ul.set-show').toggleClass("show");
+                $('.navigation ul li a i.bi-caret-down-fill').toggleClass("rotate"); 
+            });
+        </script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+        <script src="mychart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>  
+    </body>
+</html>
+ 

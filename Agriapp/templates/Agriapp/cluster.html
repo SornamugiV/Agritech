@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="dashboard.css">
+        
+        <title>Agriapp Cluster</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="navigation">
+                <ul>
+                    <li style="margin-top: 20px; margin-bottom: 40px; pointer-events: none;">
+                        <a href="#">
+                            <span class="icon">
+                                <img src="logo.png" alt="LOGO" style="height: 40px;">
+                            </span>
+                            <span class="title">Agrotech</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <span class="icon">
+                                <i class="bi bi-house-door-fill"></i>
+                            </span>
+                            <span class="title">Home</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="farmer.html">
+                            <span class="icon">
+                                <i class="bi bi-person"></i>
+                            </span>
+                            <span class="title">Farmer</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="fic.html">
+                            <span class="icon">
+                                <i class="bi bi-shop"></i>
+                            </span>
+                            <span class="title">FIC</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="buyers.html">
+                            <span class="icon">
+                                <i class="bi bi-basket"></i>
+                            </span>
+                            <span class="title">Buyers</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="buy.html">
+                            <span class="icon">
+                                <i class="bi bi-cart"></i>
+                            </span>
+                            <span class="title">Purchase</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="sales.html">
+                            <span class="icon">
+                                <i class="bi bi-cash"></i>
+                            </span>
+                            <span class="title">Sales</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a class="set-btn">
+                            <span class="icon">
+                                <i class="bi bi-gear-wide-connected"></i>
+                            </span>
+                            <span class="title">Settings</i></span>
+                            <i class="bi bi-caret-down-fill"></i>
+                        </a>
+                    </li>
+                        <ul class="set-show">
+                            <li> <a href="user.html">Manage User</a></li>
+                            <li> <a href="cluster.html">Manage Cluster</a></li>
+                            <li> <a href="fpo.html">Manage FPO</a></li>
+                        </ul>
+                    
+                </ul>
+                <ul>
+                    <li>
+                        <a href="login.html">
+                            <span class="icon">
+                                <i class="bi bi-box-arrow-right"></i>
+                            </span>
+                            <span class="title">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <i class="bi bi-list"></i>
+                </div>
+                <div class="title">
+                    <h5 style=" color: white;
+                    font-style: italic; margin: 20px;
+                    margin-bottom: 20px;">CLUSTER
+                    </h5>
+                </div>
+                
+                <div class="user">
+                    <button class="btn btn-info" style="height: 40px; width: 150px;" onclick="openForm()">
+                        <i class="bi bi-plus-square"></i>  Add
+                    </button>
+                </div>
+                
+            </div>
+           
+            <div class="table-box" style="width: 90%; margin-left: 60px;">
+                
+                <table class="table table-borderless">
+                    
+                    <thead class="border-bottom font-weight-bold">
+                        <tr style="color: #4d6e4c;">
+                            <td>Cluster ID</td>
+                            <td>Cluster Name</td>
+                            <td>Cluster Manager</td>
+                            <td>No. of agents</td>
+                            <td>No. of FPOs</td>
+                        </tr>
+                    </thead>
+                    
+                    <tbody style="color: #5d875b">
+                            <tr>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <a href="#" class="btn text-secondary px-0">
+                                        <i class="far fa-edit fa-lg"></i>
+                                    </a>
+                                        <button type="submit" class="btn">
+                                            <i class="far fa-trash-alt fa-lg text-danger float-right"></i>
+                                        </button>
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+                <div class="form-popup" id="myForm">
+                    <h2>Cluster Details</h2>
+                    <form>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="Cluster">Cluster Name</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="Cluster" name="Cluster">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                              <label for="manager">Cluster Manager</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="manager" name="manager" >
+                            </div>
+                        </div>
+                        <input type="button" value="Close" onclick="closeForm()">
+                        <input type="submit" value="Submit" onclick="closeForm()" >
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script>
+            function openForm() {
+              document.getElementById("myForm").style.display = "block";
+            }
+            
+            function closeForm() {
+              document.getElementById("myForm").style.display = "none";
+            }
+            </script>
+            
+        <script>
+            let toggle = document.querySelector('.toggle');
+            let navigation = document.querySelector('.navigation');
+            let main = document.querySelector('.main');
+            toggle.onclick = function(){
+                navigation.classList.toggle('active');
+                main.classList.toggle('active');
+            }
+        </script>
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        
+        <script>
+            $('.navigation ul li a.set-btn').click(function(){
+                $('.navigation ul ul.set-show').toggleClass("show");
+                $('.navigation ul li a i.bi-caret-down-fill').toggleClass("rotate"); 
+            });
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>  
+    </body>
+</html>
